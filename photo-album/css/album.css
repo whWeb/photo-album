@@ -88,6 +88,7 @@ position:absolute;
 top:200px;
 font-size:120px;
 color:#FFBFFF;
+cursor:hand;
 }
 .cover .lArrow{
 left:120px;
