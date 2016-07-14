@@ -1,0 +1,98 @@
+/* CSS Document */
+*{
+margin:0px;
+padding:0px;
+}
+body{
+background-color:#CCFFFF;
+}
+li{
+list-style:none;
+display:inline-block;
+}
+a{
+text-decoration:none;
+}
+#album img:hover{
+opacity: 0.8;
+}
+#config{
+display:inline-block;
+border:1px dotted #FFDFAA;
+border-radius:5px;
+padding:5px;
+overflow:hidden;
+position:fixed;
+top:5px;
+left:10px;
+z-index:100;
+box-shadow: 10px 10px 5px #888888;
+background-color:#FFCCFF;
+}
+#config .icon-menu{
+display:inline-block;
+}
+#config span{
+width:100%;
+display:inline-block;
+}
+#config ul{
+margin-top:10px;
+}
+#config .udisplay,
+#config .tdisplay{
+display:none;
+}
+#config table .property{
+display:block;
+color:#fff8d7;
+font-weight:bold;
+margin:10px 0px;
+width:110px;
+}
+#header h1{
+width:200px;
+height:50px;
+text-align:center;
+border-radius:5px;
+margin:5px;
+line-height:50px;
+color: #FFF8D7;
+background-color:#FFCCFF;
+box-shadow: 10px 10px 5px #888888;
+margin:0px auto;
+}
+#album{
+width:100%;
+}
+#puzzel,#waterFall,#barrel{
+width:80%;
+margin:20px auto;
+}
+
+.cover{
+position:fixed;
+background-color:rgba(0,0,0,0.5);
+width:100%;
+height:100%;
+text-align:center;
+top:0px;
+z-index:9;
+}
+.cover img{
+margin-top:50px;
+}
+.cover .lArrow,.cover .rArrow{
+display:block;
+position:absolute;
+top:200px;
+font-size:120px;
+color:#FFBFFF;
+}
+.cover .lArrow{
+left:120px;
+}
+.cover .rArrow{
+right:120px;
+}
+

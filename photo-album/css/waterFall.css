@@ -1,0 +1,18 @@
+/* CSS Document */
+#waterfall{
+margin:0px auto;
+width:75%;
+}
+
+#waterfall .waterfallColum{
+width:25%;
+float:left;
+overflow:hidden;
+}
+#waterfall img{
+object-fit:cover;
+object-position:center;
+border-radius:5px;
+}
+
+

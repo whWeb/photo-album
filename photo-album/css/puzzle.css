@@ -1,0 +1,122 @@
+/* CSS Document */
+#puzzel .photoBox{
+width:100%;
+height:480px;
+position:relative;
+margin:0px auto;
+}
+#puzzel img{
+height:100%;
+width:100%;
+object-fit:cover;
+object-position:center;
+border-radius:5px;
+}
+/* two images  */
+#puzzel .photoContainer-2 img:nth-child(1){
+position:absolute;
+left:0px;
+width:66.6666666666%;
+clip-path: polygon(0% 0%,100% 0%,50% 100%,0% 100%);
+-ms-clip-path: polygon(0% 0%,100% 0%,50% 100%,0% 100%);
+-o-clip-path: polygon(0% 0%,100% 0%,50% 100%,0% 100%);
+-moz-clip-path: polygon(0% 0%,100% 0%,50% 100%,0% 100%);
+-webkit-clip-path: polygon(0% 0%,100% 0%,50% 100%,0% 100%);
+}
+#puzzel .photoContainer-2 img:nth-child(2){
+position:absolute;
+right:0px;
+width:66.6666666666%;
+clip-path: polygon(50% 0%,100% 0%,100% 100%,0% 100%);
+-ms-clip-path: polygon(50% 0%,100% 0%,100% 100%,0% 100%);
+-o-clip-path: polygon(50% 0%,100% 0%,100% 100%,0% 100%);
+-moz-clip-path: polygon(50% 0%,100% 0%,100% 100%,0% 100%);
+-webkit-clip-path: polygon(50% 0%,100% 0%,100% 100%,0% 100%);
+}
+/* three images  */
+#puzzel .photoContainer-3 img:nth-child(1){
+position:absolute;
+width:66.6666666666%;
+}
+#puzzel .photoContainer-3 img:nth-child(2){
+position:absolute;
+right:0px;
+width:33.3333333333%;
+height:50%;
+}
+#puzzel .photoContainer-3 img:nth-child(3){
+position:absolute;
+right:0px;
+top:50%;
+width:33.3333333333%;
+height:50%;
+}
+/* four images  */
+#puzzel .photoContainer-4 img:nth-child(n){
+float:left;
+width:50%;
+height:50%;
+}
+/* five images  */
+#puzzel .photoContainer-5 img:nth-child(1){
+position:absolute;
+width:66.6666666666%;
+height:66.6666666666%;
+}
+#puzzel .photoContainer-5 img:nth-child(2){
+position:absolute;
+right:0px;
+width:33.3333333333%;
+height:33.3333333333%;
+}
+#puzzel .photoContainer-5 img:nth-child(3){
+position:absolute;
+right:0px;
+top:33.3333333333%;
+width:33.3333333333%;
+height:66.6666666666%;
+}
+#puzzel .photoContainer-5 img:nth-child(4){
+position:absolute;
+left:0px;
+bottom:0px;
+width:33.3333333333%;
+height:33.3333333333%;
+}
+#puzzel .photoContainer-5 img:nth-child(5){
+position:absolute;
+left:33.3333333333%;
+bottom:0px;
+width:33.3333333333%;
+height:33.3333333333%;
+}
+/* six images  */
+#puzzel .photoContainer-6 img:nth-child(1){
+position:absolute;
+width:66.6666666666%;
+height:66.6666666666%;
+}
+#puzzel .photoContainer-6 img:nth-child(2),
+#puzzel .photoContainer-6 img:nth-child(3){
+position:absolute;
+left:66.6666666666%;
+width:33.3333333333%;
+height:33.3333333333%;
+}
+#puzzel .photoContainer-6 img:nth-child(3){
+top:33.3333333333%;
+}
+#puzzel .photoContainer-6 img:nth-child(4),
+#puzzel .photoContainer-6 img:nth-child(5),
+#puzzel .photoContainer-6 img:nth-child(6){
+position:absolute;
+top:66.6666666666%;
+width:33.333333333%;
+height:33.333333333%;
+}
+#puzzel .photoContainer-6 img:nth-child(5){
+left:33.333333333%;
+}
+#puzzel .photoContainer-6 img:nth-child(6){
+right:0px;
+}

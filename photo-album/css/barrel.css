@@ -1,0 +1,15 @@
+/* CSS Document */
+#barrel img{
+display:inline-block;
+border-radius:5px;
+/*margin-left:16px;*/
+}
+#barrel .berrelWallRow img:hover{
+opacity: 0.8;
+}
+#barrel .berrelWallRow{
+width:100%;
+margin:0px auto;
+overflow:hidden;
+white-space:nowrap;/* important */
+}

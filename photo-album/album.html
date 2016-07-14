@@ -1,0 +1,87 @@
+<!DOCTYPE  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>album</title>
+<link href="css/album.css" rel="stylesheet"/>
+<link href="css/icon.css" rel="stylesheet"/>
+<link href="css/puzzle.css" rel="stylesheet"/>
+<link href="css/waterFall.css" rel="stylesheet"/>
+<link href="css/barrel.css" rel="stylesheet"/>
+<script src="javascript/loadPic.js"></script>
+<script src="javascript/dealPic.js"></script>
+<script src="javascript/album.js"></script>
+<script src="javascript/dealEvent.js"></script>
+</head>
+
+<body>
+<div id="header">
+    <h1>我的图片墙</h1>
+</div>
+	<div id="config">
+		<span class="icon-menu">菜单</span>
+		<ul class="udisplay" id="menu">
+			<li class="set"><span class="icon-cog">设置</span></li>
+			<li class="intro"><span class="icon-point-right">介绍</span></li>
+		</ul>
+		<table class="tdisplay" id="param">
+			<tr class="property"><td>Global&nbsp;parameters</td></tr>
+			<tr>
+				<td>Style</td>
+				<td>
+					<select id="style">
+						<option selected="selected">Puzzle</option>
+						<option >WaterFall</option>
+						<option >Barrel</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Width</td>
+				<td><input type="text" size="4" title="margin" value="50%" id="width" /></td>
+			</tr>			
+			<tr>
+				<td>Margin</td>
+				<td><input type="text" size="4" title="margin" value="0" id="margin" /></td>
+			</tr>
+			<tr>
+				<td>FullScreen</td>
+				<td>
+					<select id="fullScreen">
+						<option selected="selected">True</option>
+						<option>False</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id ="add"><button>AddImage</button></td>
+				<td ><input type="text" title="source of picture" size = "8"value="http://" id="addSrc"></td>
+			</tr>
+			<tr>
+				<td id ="remove"><button>RemoveImage</button></td>
+				<td ><input type="text" title="source of picture" size = "8"value="http://" id="removeSrc"></td>
+			</tr>
+			<tr class="property">
+				<td >WaterFall&nbsp;parameters</td>
+			</tr>
+			<tr>
+				<td>Columns</td>
+				<td><input type="text" size="4" title="number of column" value="3" id="column"/></td>
+			</tr>
+			<tr class="property"> 
+				<td >Barrel&nbsp;parameters</td>
+			</tr>
+			<tr>
+				<td>MinHeight</td>
+				<td><input type="text" size="4" title="min of height" value="200" id="minHeight"/></td>
+			</tr>
+		</table>
+	</div>
+
+<div id="album">
+	<div id="puzzel"></div>
+	<div id="waterFall"></div>
+	<div id="barrel"></div>
+</div>
+</body>
+</html>
