@@ -185,7 +185,7 @@
 				var Div = creatDivElement('photoBox photoContainer-3');
 				parent.appendChild(Div);
 				var boxes = addImgToParent(g_option.images,len,Div);
-				resize(Div,3);
+				//resize(Div,3);
 				break;
 			case 4:
 				var Div = creatDivElement('photoBox photoContainer-4');
@@ -196,7 +196,7 @@
 				var Div = creatDivElement('photoBox photoContainer-5');
 				parent.appendChild(Div);
 				var boxes = addImgToParent(g_option.images,len,Div);
-				resize(Div,5);
+				//resize(Div,5);
 				break;			
 			case 6:
 				var Div = creatDivElement('photoBox photoContainer-6');
@@ -401,23 +401,30 @@
 	//拼图布局（3、5个图片）
 	function resize(parent,length){
 		var boxes = parent.querySelectorAll("img");	
+		var val;
 		if(length == 3) {   
 			var offset = parseFloat(parseFloat(parent.clientHeight)/2);
-			boxes[0].style.width = (parseFloat(parent.clientWidth) - offset) + 'px';
+			val = (parseFloat(parent.clientWidth) - offset) + 'px';
+			boxes[0].style.width = val;
 			boxes[1].style.width = offset + 'px';
 			boxes[1].style.height = offset + 'px';
+			boxes[1].style.left = val;
 			boxes[2].style.top = offset + 'px';
 			boxes[2].style.width = offset + 'px';
-			boxes[2].style.height = offset + 'px';			
+			boxes[2].style.height = offset + 'px';	
+			boxes[2].style.left = val;
 		}
 	   else if(length == 5){
 			var offset = parseFloat(parseFloat(parent.clientWidth)/3);
-			boxes[0].style.width = (parseFloat(parent.clientWidth) - offset) + 'px';
+			val = (parseFloat(parent.clientWidth) - offset) + 'px';
+			boxes[0].style.width = val;
 			boxes[1].style.width = offset + 'px';
 			boxes[1].style.height = offset + 'px';
+			boxes[1].style.left = val;
 			boxes[2].style.top = offset + 'px';
 			boxes[2].style.width = offset + 'px';
-			boxes[2].style.height = (parent.clientHeight - offset) + 'px';			
+			boxes[2].style.left = val;
+			boxes[2].style.height = (parent.clientHeight - offset) + 'px';	
 		}
 	}
 	//瀑布布局

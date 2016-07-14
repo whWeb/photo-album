@@ -40,13 +40,13 @@ width:66.6666666666%;
 }
 #puzzel .photoContainer-3 img:nth-child(2){
 position:absolute;
-right:0px;
+left:66.6666666666%;
 width:33.3333333333%;
 height:50%;
 }
 #puzzel .photoContainer-3 img:nth-child(3){
 position:absolute;
-right:0px;
+left:66.6666666666%;
 top:50%;
 width:33.3333333333%;
 height:50%;
@@ -65,13 +65,13 @@ height:66.6666666666%;
 }
 #puzzel .photoContainer-5 img:nth-child(2){
 position:absolute;
-right:0px;
+left:66.6666666666%;
 width:33.3333333333%;
 height:33.3333333333%;
 }
 #puzzel .photoContainer-5 img:nth-child(3){
 position:absolute;
-right:0px;
+left:66.6666666666%;
 top:33.3333333333%;
 width:33.3333333333%;
 height:66.6666666666%;
