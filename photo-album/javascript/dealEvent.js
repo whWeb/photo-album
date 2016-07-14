@@ -8,7 +8,7 @@ function onEvent(){
 		if( display == "" || display == "none"){
 			document.querySelector("#menu").style.display = "inline-block";
 			document.querySelector("#config").style.width = "15%";
-			document.querySelector("#config").style.minWidth = 200 + 'px';
+			document.querySelector("#config").style.minWidth = 220 + 'px';
 		}
 		else{
 			document.querySelector("#menu").style.display = "none";	
