@@ -4,6 +4,9 @@ function onEvent(){
 	var menu = document.querySelector(".icon-menu");
 	menu.style.cursor = "hand";
 	menu.onclick = function(){
+		if(document.querySelector("#param").style.display == "block"){
+			return false;
+		}
 		var display = document.querySelector("#menu").style.display;		
 		if( display == "" || display == "none"){
 			document.querySelector("#menu").style.display = "inline-block";
