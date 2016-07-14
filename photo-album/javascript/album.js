@@ -60,14 +60,24 @@
 			g_option.berrelRows = [];
 			g_option.minHeight = minHeight.value;
 			if(val){
-				if(val == "Puzzle")
+				if(val == "Puzzle"){
 					g_option.layout = "PUZZLE";
+					column.disabled= "disabled";
+					minHeight.disabled= "disabled";
+					margin.disabled= "disabled";
+				}
 				else if(val == "WaterFall"){
 					g_option.layout = "WATERFALL";	
 					g_option.clolumNum = column.value;
+					minHeight.disabled= "disabled";
+					column.disabled= "";
+					margin.disabled= "";
 				}
 				else{
 					g_option.layout = "BARREL";
+					column.disabled= "disabled";
+					minHeight.disabled= "";
+					margin.disabled= "";
 				}
 			}
 			that.setLayout();	
