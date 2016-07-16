@@ -1,34 +1,6 @@
 // JavaScript Document
 window.onload = onEvent;
-function onEvent(){
-	var menu = document.querySelector(".icon-menu");
-	menu.style.cursor = "hand";
-	menu.onclick = function(){
-		if(document.querySelector("#param").style.display == "block"){
-			return false;
-		}
-		var display = document.querySelector("#menu").style.display;		
-		if( display == "" || display == "none"){
-			document.querySelector("#menu").style.display = "inline-block";
-			document.querySelector("#config").style.width = "15%";
-			document.querySelector("#config").style.minWidth = 220 + 'px';
-		}
-		else{
-			document.querySelector("#menu").style.display = "none";	
-			document.querySelector("#config").style.width = 60 + 'px';
-			document.querySelector("#config").style.minWidth = 0 + 'px';			
-		}
-	}
-	var cog = document.querySelector(".set");
-	cog.style.cursor = "hand";
-	cog.onclick = function(){
-		var display = document.querySelector("#param").style.display;		
-		if( display == "" || display == "none"){
-			document.querySelector("#param").style.display = "block";
-		}
-		else
-			document.querySelector("#param").style.display = "none";		
-	}	
+function onEvent(){	
 	var fullScreen = document.querySelector("#fullScreen");
 	var album = document.querySelector("#album");
 	album.onclick = function(){
@@ -53,6 +25,21 @@ function onEvent(){
 						Body.removeChild(Div);							   
 				})
 			}	
+		}
+	}
+	
+	var sidebar = document.querySelector("#sideArrow");
+	var config = document.querySelector("#config");
+	sidebar.onclick = function(){
+		if(sidebar.className == "sidebar-open"){
+			sidebar.className = "sidebar-close";
+			config.style.left = -300 + "px";
+			sidebar.style.backgroundColor = "#e6e6e6";
+		}else{
+			sidebar.className="sidebar-open";
+			config.style.left = 0 + "px";
+			sidebar.style.backgroundColor = "#FFDFFF";
+
 		}
 	}
 }

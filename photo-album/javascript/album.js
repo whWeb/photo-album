@@ -180,36 +180,35 @@
 		var parent = document.querySelector('#puzzel');
 		parent.style.width = g_option.width;
 		var len = g_option.images.length;
+		var Div;
 		switch(len){
 			case 1:
-				var Div = creatDivElement('photoBox photoContainer-1');
+				Div = creatDivElement('photoBox photoContainer-1');
 				parent.appendChild(Div);
 				addImgToParent(g_option.images,len,Div);
 				break;
 			case 2:
-				var Div = creatDivElement('photoBox photoContainer-2');
+				Div = creatDivElement('photoBox photoContainer-2');
 				parent.appendChild(Div);
 				addImgToParent(g_option.images,len,Div);				
 				break;			
 			case 3:
-				var Div = creatDivElement('photoBox photoContainer-3');
+				Div = creatDivElement('photoBox photoContainer-3');
 				parent.appendChild(Div);
-				var boxes = addImgToParent(g_option.images,len,Div);
-				//resize(Div,3);
+				addImgToParent(g_option.images,len,Div);
 				break;
 			case 4:
-				var Div = creatDivElement('photoBox photoContainer-4');
+				Div = creatDivElement('photoBox photoContainer-4');
 				parent.appendChild(Div);
 				addImgToParent(g_option.images,len,Div);
 				break;
 			case 5:
-				var Div = creatDivElement('photoBox photoContainer-5');
+				Div = creatDivElement('photoBox photoContainer-5');
 				parent.appendChild(Div);
-				var boxes = addImgToParent(g_option.images,len,Div);
-				//resize(Div,5);
+				boxes = addImgToParent(g_option.images,len,Div);
 				break;			
 			case 6:
-				var Div = creatDivElement('photoBox photoContainer-6');
+				Div = creatDivElement('photoBox photoContainer-6');
 				parent.appendChild(Div);
 				addImgToParent(g_option.images,len,Div);
 				break;
@@ -217,7 +216,7 @@
 				var beg = 0;
 				var tmp = len;
 				while(tmp >= 6){
-					var Div = creatDivElement('photoBox photoContainer-6');
+					Div = creatDivElement('photoBox photoContainer-6');
 					parent.appendChild(Div);
 					addImgToParent(g_option.images.slice(beg,beg+6),6,Div);	
 					beg = beg + 6;					
@@ -225,7 +224,7 @@
 				}
 					var i = len - beg;
 					var className = 'photoBox photoContainer-'+ i ;
-					var Div = creatDivElement(className);
+					Div = creatDivElement(className);
 					parent.appendChild(Div);
 					addImgToParent(g_option.images.slice(beg,len),len - beg,Div);	
 		}	
@@ -233,9 +232,10 @@
 	/*实现瀑布布局*/
 	WhAlbum.prototype.setWaterFall = function(){
 		var parent = document.querySelector("#waterFall");
+		var len = g_option.clolumNum;
 		parent.style.width = g_option.width;
 		g_option.colums = [];
-		for(var i = 0; i < g_option.clolumNum;i++){
+		for(var i = 0; i < len;i++){
 			var Div = creatDivElement("waterfallColum");			
 			g_option.colums.push(Div);
 			parent.appendChild(Div);
@@ -251,9 +251,10 @@
 			return;
 		}
 		var len = images.length;
+		var index,Img;
 		for(var i = 0; i < len;i++){
-			var index = minHeightColum();
-			var Img = creatImgElement(images[i], i);
+			index = minHeightColum();
+			Img = creatImgElement(images[i], i);
 			Img.style.width = g_option.colums[index].clientWidth - g_option.margin*2 + 'px';
 			Img.style.margin = g_option.margin;
 			g_option.colums[index].appendChild(Img);
@@ -269,12 +270,13 @@
 	
 	WhAlbum.prototype.barrelImgBox = function(photos){
 		var bool = photos instanceof Array;
+		var len = photos.length;
 		if (!bool) {
 		 	// 包装成数组处理
 			this.barrelImgBox([photos]);
 			return;
 		}		
-		for(var i = 0; i < photos.length;i++){
+		for(var i = 0; i < len;i++){
 			g_option.berrelImgBoxes.push(creatImgElement(photos[i],i));	
 		}	
 	}
@@ -407,42 +409,13 @@
 				parent.removeChild(child);
 			}	
 	}
-	
-	//拼图布局（3、5个图片）
-	function resize(parent,length){
-		var boxes = parent.querySelectorAll("img");	
-		var val;
-		if(length == 3) {   
-			var offset = parseFloat(parseFloat(parent.clientHeight)/2);
-			val = (parseFloat(parent.clientWidth) - offset) + 'px';
-			boxes[0].style.width = val;
-			boxes[1].style.width = offset + 'px';
-			boxes[1].style.height = offset + 'px';
-			boxes[1].style.left = val;
-			boxes[2].style.top = offset + 'px';
-			boxes[2].style.width = offset + 'px';
-			boxes[2].style.height = offset + 'px';	
-			boxes[2].style.left = val;
-		}
-	   else if(length == 5){
-			var offset = parseFloat(parseFloat(parent.clientWidth)/3);
-			val = (parseFloat(parent.clientWidth) - offset) + 'px';
-			boxes[0].style.width = val;
-			boxes[1].style.width = offset + 'px';
-			boxes[1].style.height = offset + 'px';
-			boxes[1].style.left = val;
-			boxes[2].style.top = offset + 'px';
-			boxes[2].style.width = offset + 'px';
-			boxes[2].style.left = val;
-			boxes[2].style.height = (parent.clientHeight - offset) + 'px';	
-		}
-	}
 	//瀑布布局
 	/*获得最低列索引*/
 	function minHeightColum(){
 		var minHeight = g_option.colums[0].clientHeight;
 		var minIndex = 0;
-		for(var i = 0; i < g_option.colums.length; i++){
+		var len = g_option.colums.length;;
+		for(var i = 0; i < len; i++){
 			if(g_option.colums[i].clientHeight < minHeight){
 				minIndex = i;
 				minHeight = g_option.colums[i].clientHeight;

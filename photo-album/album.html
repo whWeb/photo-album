@@ -1,88 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE>
+<html>
 <head>
-<meta charset="utf-8">
-<title>album</title>
-<link rel="shortcut icon" href="images/title.ico">
-<link href="css/album.css" rel="stylesheet"/>
-<link href="css/icon.css" rel="stylesheet"/>
-<link href="css/puzzle.css" rel="stylesheet"/>
-<link href="css/waterFall.css" rel="stylesheet"/>
-<link href="css/barrel.css" rel="stylesheet"/>
+	<meta charset="utf-8">
+	<title>album</title>
+	<link rel="shortcut icon" href="images/title.ico">
+	<link href="css/album.css" rel="stylesheet"/>
+	<link href="css/icon.css" rel="stylesheet"/>
+	<link href="css/puzzle.css" rel="stylesheet"/>
+	<link href="css/waterFall.css" rel="stylesheet"/>
+	<link href="css/barrel.css" rel="stylesheet"/>
+</head>
+<body>
+<canvas id ="bubble"></canvas>
+<div id="container">
+	<div id="header">
+		<h1>My Photo Wall</h1>
+	</div>
+	<div id="slider">
+		<a href="#" id="sideArrow" class="sidebar-close"></a>
+		<div id="config">
+			<fieldset>
+				<legend>Style</legend>
+				   <table class="tb">
+					 <tr>
+					   <td class="left">Style</td>
+					   <td>
+						<select id="style">
+							<option selected="selected">Puzzle</option>
+							<option >WaterFall</option>
+							<option >Barrel</option>
+						</select>				   </td>
+					 </tr>	 
+				   </table>
+		   </fieldset>
+		   <fieldset>
+				<legend>Setting</legend>
+					<table class="tb1">
+					<tr>
+						<td>Width</td>
+						<td><input type="text" size="7" title="margin" value="50%" id="width" /></td>
+					</tr>			
+					<tr>
+						<td>Margin</td>
+						<td><input type="text" size="7" title="margin" value="0" id="margin" disabled="disabled"/></td>
+					</tr>
+					<tr>
+						<td>Columns</td>
+						<td><input type="text" size="7" title="number of column" value="3" id="column" disabled="disabled"/></td>
+					</tr>	
+				<tr>
+					<td>MinHeight</td>
+					<td><input type="text" size="7" title="min of height" value="200" id="minHeight" disabled="disabled"/></td>
+				</tr>
+					<tr>
+						<td>FullScreen</td>
+						<td>
+							<select id="fullScreen">
+								<option selected="selected">True</option>
+								<option>False</option>
+							</select>					</td>
+					</tr>			
+				</table>
+		   </fieldset>
+		   <fieldset>
+		   <legend>Button</legend>
+				<table class="tb2">
+					<tr>
+					<td id ="add"><button>AddImage</button></td>
+					<td ><input type="text" title="source of picture" size = "8"value="http://" id="addSrc"></td>
+				</tr>
+				<tr>
+					<td id ="remove"><button>RemoveImage</button></td>
+					<td ><input type="text" title="source of picture" size = "8"value="http://" id="removeSrc"></td>
+				</tr>		
+		   </table>
+		   </fieldset>
+		</div>
+	</div>
+
+	<div id="album">
+		<div id="puzzel"></div>
+		<div id="waterFall"></div>
+		<div id="barrel"></div>
+	</div>
+</div>
 <script src="javascript/loadPic.js"></script>
 <script src="javascript/dealPic.js"></script>
 <script src="javascript/album.js"></script>
 <script src="javascript/dealEvent.js"></script>
-</head>
-
-<body>
-<div id="header">
-    <h1>My Photo Wall</h1>
-</div>
-	<div id="config">
-		<span class="icon-menu">Menu</span>
-		<ul class="udisplay" id="menu">
-			<li class="set"><span class="icon-cog">Configure</span></li>
-			<li class="intro"><span class="icon-point-right">Introduction</span></li>
-		</ul>
-		<table class="tdisplay" id="param">
-			<tr class="property"><td>Global&nbsp;parameters</td></tr>
-			<tr>
-				<td>Style</td>
-				<td>
-					<select id="style">
-						<option selected="selected">Puzzle</option>
-						<option >WaterFall</option>
-						<option >Barrel</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Width</td>
-				<td><input type="text" size="4" title="margin" value="50%" id="width" /></td>
-			</tr>			
-			<tr>
-				<td>Margin</td>
-				<td><input type="text" size="4" title="margin" value="0" id="margin" disabled="disabled"/></td>
-			</tr>
-			<tr>
-				<td>FullScreen</td>
-				<td>
-					<select id="fullScreen">
-						<option selected="selected">True</option>
-						<option>False</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td id ="add"><button>AddImage</button></td>
-				<td ><input type="text" title="source of picture" size = "8"value="http://" id="addSrc"></td>
-			</tr>
-			<tr>
-				<td id ="remove"><button>RemoveImage</button></td>
-				<td ><input type="text" title="source of picture" size = "8"value="http://" id="removeSrc"></td>
-			</tr>
-			<tr class="property">
-				<td >WaterFall&nbsp;parameters</td>
-			</tr>
-			<tr>
-				<td>Columns</td>
-				<td><input type="text" size="4" title="number of column" value="3" id="column" disabled="disabled"/></td>
-			</tr>
-			<tr class="property"> 
-				<td >Barrel&nbsp;parameters</td>
-			</tr>
-			<tr>
-				<td>MinHeight</td>
-				<td><input type="text" size="4" title="min of height" value="200" id="minHeight" disabled="disabled"/></td>
-			</tr>
-		</table>
-	</div>
-
-<div id="album">
-	<div id="puzzel"></div>
-	<div id="waterFall"></div>
-	<div id="barrel"></div>
-</div>
+<script src="javascript/bubble.js"></script>
 </body>
 </html>
