@@ -6,7 +6,7 @@ function request(url){
 		httpRequest.open('GET', url);
    		httpRequest.send();
 		httpRequest.addEventListener('load', function () {
-     		deal(JSON.parse(this.response));   /* Òì²½½øĞĞ, µÈ¼àÌıµ½¡°load¡± ²Å»áÖ´ĞĞdeal(value)*/
+     		deal(JSON.parse(this.response));   /* å¼‚æ­¥è¿›è¡Œ, ç­‰ç›‘å¬åˆ°â€œloadâ€ æ‰ä¼šæ‰§è¡Œdeal(value)*/
     	})
 	})
 }

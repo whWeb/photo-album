@@ -1,6 +1,6 @@
 // JavaScript Document
-var dealPic = function(exe){           /* exe是个函数 */
-	exe(this.deal.bind(this),this.reject.bind(this));         /* 执行exe(deal) */
+var dealPic = function(exe){           /* exe鏄釜鍑芥暟 */
+	exe(this.deal.bind(this),this.reject.bind(this));         /* 鎵цexe(deal) */
 }
 dealPic.prototype.deal = function(value){
 	if(this.onDeal)
