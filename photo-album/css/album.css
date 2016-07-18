@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* CSS Document */
 *{
 margin:0px;
@@ -62,7 +63,7 @@ top:50px;
 left:-300px;
 transition: left 1s;
 -moz-transition: left 1s;	/* Firefox 4 */
--webkit-transition: left 1s;	/* Safari ºÍ Chrome */
+-webkit-transition: left 1s;	/* Safari å’Œ Chrome */
 -o-transition: left 1s;
 }
 #config td{
