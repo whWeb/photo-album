@@ -255,7 +255,7 @@
 		for(var i = 0; i < len;i++){
 			index = minHeightColum();
 			Img = creatImgElement(images[i], i);
-			Img.style.width = g_option.colums[index].clientWidth ? g_option.colums[index].clientWidth : 100% - g_option.margin*2 + 'px';
+			Img.style.width = (g_option.colums[index].clientWidth ? g_option.colums[index].clientWidth : parent.clientWidth/3) - g_option.margin*2 + 'px';
 			Img.style.margin = g_option.margin;
 			g_option.colums[index].appendChild(Img);
 		}		
