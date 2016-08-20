@@ -118,9 +118,7 @@
 						that.setBoxToWaterFall(that.photos[randy]);
 						break;				
 					case 3:
-						dele = document.querySelector("#barrel");
 						that.setBoxToBarrel(that.photos[randy]);
-						g_option.berrelImgBoxes = g_option.berrelImgTmpBoxes;
 						break;				
 				}
 			}
@@ -150,8 +148,10 @@
 					deleChild(dele);
 					var randy = getRandyPic(g_option.images.length);
 					var src = document.querySelector('#removeSrc');
-					src.value = "images/" + g_option.images[randy].src + ".jpg";					
-					g_option.images.splice(randy,1);
+					if(g_option.images.length>0){
+						src.value = "images/" + g_option.images[randy].src + ".jpg";					
+						g_option.images.splice(randy,1);
+					}
 					g_option.isLayout = false;
 					that.addImage();
 			}
@@ -205,7 +205,7 @@
 			case 5:
 				Div = creatDivElement('photoBox photoContainer-5');
 				parent.appendChild(Div);
-				boxes = addImgToParent(g_option.images,len,Div);
+				addImgToParent(g_option.images,len,Div);
 				break;			
 			case 6:
 				Div = creatDivElement('photoBox photoContainer-6');
@@ -337,7 +337,6 @@
 		 var count = 0;
 		 g_option.berrelRowIfm = [];
 		 g_option.berrelRows = [];
-		 g_option.berrelImgTmpBoxes = g_option.berrelImgBoxes;
 		 g_option.berrelImgBoxes = [];
 		 if(lastRowWidth < container.clientWidth){
 			 count  = container.lastChild.childNodes.length;
